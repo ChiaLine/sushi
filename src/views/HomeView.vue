@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="pug">
 import TheWelcome from '@/components/TheWelcome.vue'
 </script>
 
