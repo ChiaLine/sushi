@@ -2,24 +2,17 @@
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
-<template>
-  <div id="app">
-    <header  class="bg-yellow-900">
-      <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-      <img alt="Vue logo" class="logo" src="@/assets/sushiLogo.png" width="125" height="125" />
-
-      <div class="wrapper">
-        <HelloWorld msg="Vite + Vue2"/>
-
-        <nav>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-        </nav>
-      </div>
-    </header>
-
-    <router-view class="bg-yellow-700"/>
-  </div>
+<template lang="pug">
+#app
+  header.bg-yellow-900
+    // <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    img.logo(alt='Vue logo', src='@/assets/sushiLogo.png', width='125', height='125')
+    .wrapper
+      HelloWorld(msg='Vite + Vue2')
+        nav
+          router-link(to='/') Home
+          router-link(to='/about') About
+  router-view.bg-yellow-700
 </template>
 
 <style scoped>

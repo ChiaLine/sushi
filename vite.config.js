@@ -17,5 +17,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.pug$/,
+        use: 'pug-plain-loader'
+      }
+    ]
   }
 })
