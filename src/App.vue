@@ -1,87 +1,25 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
-<template>
-  <div id="app">
-    <header  class="bg-yellow-900">
-      <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-      <img alt="Vue logo" class="logo" src="@/assets/sushiLogo.png" width="125" height="125" />
-
-      <div class="wrapper">
-        <HelloWorld msg="Vite + Vue2"/>
-
-        <nav>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-        </nav>
-      </div>
-    </header>
-
-    <router-view class="bg-yellow-700"/>
-  </div>
+<template lang="pug">
+div(class='w-[75%] h-[80vh] m-auto mt-20 flex')
+  div(class='w-[90%]')
+    router-view(class='')
+  div(class='w-[10%]')
+    nav(class='h-full cursor-pointer')
+      router-link(to='/' class='hover:bg-yellow-300 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-full') 品牌故事
+      router-link(to='/about' class='hover:bg-yellow-100 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-lg') 關於我們
+      router-link(to='/menu' class='hover:bg-yellow-300 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-full') 菜單
+      router-link(to='/menu1' class='hover:bg-yellow-100 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-lg') 現流刺身さしみ
+      router-link(to='/menu2' class='hover:bg-yellow-300 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-full') 炙燒握壽司
+      router-link(to='/menu3' class='hover:bg-yellow-100 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-lg') 生魚片丼飯
+      router-link(to='/' class='hover:bg-yellow-300 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-full') 手卷
+      router-link(to='/' class='hover:bg-yellow-100 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-lg') 烤物
+      router-link(to='/' class='hover:bg-yellow-300 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-full')
+      router-link(to='/' class='hover:bg-yellow-100 block mb-1 py-2 px-2 border-double border-y-4 border-r-4 border-black rounded-r-lg')
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>

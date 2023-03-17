@@ -16,10 +16,27 @@ const router = new VueRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: () => import('../views/MenuView.vue')
+    },
+    {
+      path: '/menu1',
+      name: 'menu1',
+      component: () => import('../views/Menu1.vue')
+    },
+    {
+      path: '/menu2',
+      name: 'menu2',
+      component: () => import('../views/Menu2.vue')
+    },
+    {
+      path: '/menu3',
+      name: 'menu3',
+      component: () => import('../views/Menu3.vue')
     }
   ]
 })
